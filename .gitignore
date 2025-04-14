@@ -1,0 +1,38 @@
+cat > .gitignore <<EOF
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build outputs
+dist/
+build/
+out/
+
+# Dependency directories
+node_modules/
+
+# Environment files
+.env
+.env.*
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.sublime*
+
+# System or temp files
+*.tmp
+*.bak
+*~
+*.orig
+
+# Git itself
+.git/
+
+# Termux/Android specific
+storage/
+EOF
