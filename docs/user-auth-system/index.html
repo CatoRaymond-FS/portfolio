@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Authentication System Documentation</title>
+  <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+  <header>
+    <h1>User Authentication System Documentation</h1>
+    <nav>
+         <a id="home-link" href="#">Home</a>
+      <a href="#overview">Overview</a>
+      <a href="#features">Features</a>
+      <a href="#tech-stack">Tech Stack</a>
+      <a href="#installation">Installation</a>
+      <a href="#usage">Usage</a>
+      <a href="#security">Security</a>
+      <a href="#contributing">Contributing</a>
+    </nav>
+  </header>
+
+  <section id="overview">
+    <h2>Overview</h2>
+    <p>
+      This project implements a simple and secure user authentication system. It allows users to sign up, log in, and maintain their session via JWT (JSON Web Tokens). Passwords are securely hashed using bcrypt, ensuring data security. The system provides a RESTful API with clear routes for handling authentication processes.
+    </p>
+  </section>
+
+  <section id="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li><strong>Signup and Login:</strong> Users can securely sign up and log in with their credentials.</li>
+      <li><strong>Password Hashing:</strong> Passwords are hashed with bcrypt before storage in the database, ensuring they are never stored as plaintext.</li>
+      <li><strong>JWT Authentication:</strong> Authentication is managed using JSON Web Tokens (JWT), ensuring secure and stateless sessions.</li>
+      <li><strong>API Documentation:</strong> The API is structured to support user authentication routes, including signup, login, and user profile retrieval.</li>
+    </ul>
+  </section>
+
+  <section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <p>This project is built using the following technologies:</p>
+    <ul>
+      <li><strong>Backend:</strong> Node.js, Express.js</li>
+      <li><strong>Database:</strong> MySQL for storing user credentials</li>
+      <li><strong>Password Security:</strong> bcrypt for password hashing</li>
+      <li><strong>Authentication:</strong> JWT for secure authentication and token management</li>
+    </ul>
+  </section>
+
+  <section id="installation">
+    <h2>Installation Instructions</h2>
+    <h3>Clone the Repository</h3>
+    <p>To start, clone the repository to your local machine:</p>
+    <pre><code>git clone https://github.com/CatoRaymond-FS/loginWithAuth.git</code></pre>
+
+    <h3>Install Dependencies</h3>
+    <p>After cloning the repo, navigate to the project directory and install the necessary dependencies:</p>
+    <pre><code>npm install</code></pre>
+
+    <h3>Set Up Environment Variables</h3>
+    <p>Ensure you create a `.env` file at the root of your project with the following environment variables:</p>
+    <pre><code>
+    DB_HOST=localhost
+    DB_USER=root
+    DB_PASSWORD=password
+    DB_NAME=auth_system
+    JWT_SECRET=your_jwt_secret
+    </code></pre>
+
+    <h3>Start the Development Server</h3>
+    <p>To run the server in development mode, use the following command:</p>
+    <pre><code>npm start</code></pre>
+    <p>The API will be available at <code>http://localhost:5000</code> (or the specified port).</p>
+  </section>
+
+  <section id="usage">
+    <h2>Usage</h2>
+    <p>Once the server is up and running, you can use the following routes:</p>
+    <ul>
+      <li><strong>POST /signup:</strong> Registers a new user. Requires <code>email</code> and <code>password</code>.</li>
+      <li><strong>POST /login:</strong> Authenticates a user. Requires <code>email</code> and <code>password</code>. Returns a JWT token.</li>
+      <li><strong>GET /profile:</strong> Retrieves the logged-in user's profile information. Requires a valid JWT token in the Authorization header.</li>
+    </ul>
+  </section>
+
+  <section id="security">
+    <h2>Security Considerations</h2>
+    <p>
+      All passwords are hashed with bcrypt before being stored in the database. This ensures that even if the database is compromised, user passwords cannot be retrieved in plaintext. Additionally, JWT tokens are used for session management, providing secure authentication and authorization.
+    </p>
+    <p><strong>Important:</strong> Always keep the JWT secret and database credentials secure by using environment variables and a secure .env file.</p>
+  </section>
+
+  <section id="contributing">
+    <h2>Contributing</h2>
+    <p>If you'd like to contribute to this project, follow these steps:</p>
+    <ul>
+      <li>Fork the repository.</li>
+      <li>Clone your fork to your local machine.</li>
+      <li>Create a new branch for your feature or bugfix.</li>
+      <li>Make your changes and commit them with clear messages.</li>
+      <li>Push your changes to your fork and create a pull request.</li>
+    </ul>
+    <p>We welcome contributions and appreciate your help in improving this project!</p>
+  </section>
+
+  <footer>
+    <p>For more details, visit the <a href="https://github.com/CatoRaymond-FS/loginWithAuth" target="_blank">GitHub repository</a>.</p>
+  </footer>
+  <script>
+  const isLocal = location.protocol === 'file:';
+  const homeLink = isLocal ? '../../index.html' : '/portfolio/index.html';
+  document.getElementById('home-link').setAttribute('href', homeLink);
+</script>
+</body>
+</html>

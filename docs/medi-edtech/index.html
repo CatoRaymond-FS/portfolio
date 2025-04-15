@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medi-EdTech Documentation</title>
+  <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+  <header>
+    <h1>Medi-EdTech Documentation</h1>
+    <nav>
+      <a id="home-link" href="#">Home</a>
+      <a href="#overview">Overview</a>
+      <a href="#features">Features</a>
+      <a href="#tech-stack">Tech Stack</a>
+      <a href="#installation">Installation</a>
+      <a href="#usage">Usage</a>
+      <a href="#contributing">Contributing</a>
+    </nav>
+  </header>
+
+  <section id="overview">
+    <h2>Overview</h2>
+    <p>
+      Medi-EdTech is an educational tool designed to help students, educators, and healthcare professionals learn about medications interactively. The platform provides a searchable database of medications, including their uses, dosages, side effects, and detailed explanations of how each medication works.
+    </p>
+  </section>
+
+  <section id="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li><strong>Searchable Medication Database:</strong> Quickly search for medications by name, use, dosage, or side effects.</li>
+      <li><strong>Filter by Medication Type, Dosage, and Side Effects:</strong> Refine your search results to find exactly what you need.</li>
+      <li><strong>Detailed Medication Information:</strong> Access in-depth information on each medication's use, dosage, side effects, and mechanisms of action ("How It Works").</li>
+      <li><strong>Interactive Interface:</strong> Designed with students and educators in mind, the clean and intuitive user interface makes navigation easy and effective.</li>
+    </ul>
+  </section>
+
+  <section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <p>This project is built with the following technologies:</p>
+    <ul>
+      <li><strong>Frontend:</strong> React.js, Vite, CSS</li>
+      <li><strong>Data:</strong> JSON file format for medications data</li>
+      <li><strong>UI/UX:</strong> Responsive design with mobile-first approach</li>
+    </ul>
+  </section>
+
+  <section id="installation">
+    <h2>Installation Instructions</h2>
+    <h3>Clone the Repository</h3>
+    <p>To get started, clone the repository:</p>
+    <pre><code>git clone https://github.com/CatoRaymond-FS/medi-edtech.git</code></pre>
+
+    <h3>Install Dependencies</h3>
+    <p>Install the necessary dependencies by running:</p>
+    <pre><code>npm install</code></pre>
+
+    <h3>Start the Development Server</h3>
+    <p>Start the project in development mode:</p>
+    <pre><code>npm run dev</code></pre>
+    <p>The app will be available at <code>http://localhost:5173</code></p>
+  </section>
+
+  <section id="usage">
+    <h2>Usage</h2>
+    <p>Once the application is running, you can:</p>
+    <ul>
+      <li>Search for medications using the search bar.</li>
+      <li>Filter medications based on type, dosage, or side effects.</li>
+      <li>Click on any medication card to view more detailed information about it.</li>
+      <li>Learn how the medication works in the "How It Works" section on each medication's detail page.</li>
+    </ul>
+  </section>
+
+  <section id="contributing">
+    <h2>Contributing</h2>
+    <p>If you would like to contribute to this project, follow these steps:</p>
+    <ul>
+      <li>Fork the repository.</li>
+      <li>Create a new branch for your feature/bugfix.</li>
+      <li>Make your changes and commit them with clear messages.</li>
+      <li>Push your changes and create a pull request for review.</li>
+    </ul>
+    <p>We welcome contributions and appreciate your help in making this project better!</p>
+  </section>
+
+  <footer>
+    <p>For more information, visit the <a href="https://github.com/CatoRaymond-FS/medi-edtech">GitHub repository</a>.</p>
+  </footer>
+  <script>
+  const isLocal = location.protocol === 'file:';
+  const homeLink = isLocal ? '../../index.html' : '/portfolio/index.html';
+  document.getElementById('home-link').setAttribute('href', homeLink);
+</script>
+</body>
+</html>
