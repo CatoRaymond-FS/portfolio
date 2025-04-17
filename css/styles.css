@@ -1,3 +1,4 @@
+/* === Global Styles === */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -34,6 +35,12 @@ nav a:hover {
 main {
   padding: 2em;
   line-height: 1.6;
+  padding-bottom: 6rem; /* increased from 2em to make room for fixed footer */
+}
+
+main.container {
+  flex: 1;
+  padding-bottom: 6rem; /* increased from 4rem */
 }
 
 h2 {
@@ -63,11 +70,55 @@ ul {
   margin-left: 2em;
 }
 
-main.container {
-  flex: 1;
-  padding-bottom: 4rem;
+/* === TL;DR Button Style === */
+.tldr-button {
+  background-color: #2f195f;
+  color: #d0aaff;
+  border: 2px solid #d0aaff;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 1.5rem;
 }
-/* Contact Page Styles */
+
+.tldr-button:hover {
+  background-color: #b8ff00;
+  color: #1b1b2f;
+}
+
+/* === TL;DR Section Slide Animation === */
+.tldr-section {
+  display: none;
+  background-color: #2f195f;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(111, 0, 255, 0.3);
+  color: #d0aaff;
+  margin-top: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.tldr-section.show {
+  max-height: 500px; /* You can adjust this if content gets clipped */
+  padding: 2em;
+  opacity: 1;
+}
+
+.tldr-section h2 {
+  color: #b8ff00;
+  margin-bottom: 1rem;
+}
+
+.tldr-section p {
+  font-size: 1.1rem;
+}
+
+/* === Contact Page Styles === */
 body.contact-page {
   background-color: #1b1c3a;
   color: #eaeaea;
@@ -90,6 +141,7 @@ body.contact-page {
   margin-bottom: 1rem;
   text-align: center;
 }
+
 .contact-section {
   max-width: 700px;
   margin: 2rem auto;

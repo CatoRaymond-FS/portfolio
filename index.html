@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +15,9 @@
       <a href="skills.html">Contact Me</a>
       <a href="edtech.html">EdTech Guides</a>
     </nav>
+    <button onclick="document.getElementById('tldr').scrollIntoView({ behavior: 'smooth' })" class="tldr-button">
+      Just give me the TL;DR
+    </button>
   </header>
 
   <main>
@@ -25,7 +27,8 @@
       <p>I specialize in creating technical documentation and backend systems that are both functional and approachable. I also explore educational tools that make tech easier to understand.</p>
       <p>Outside of work, I love world-building, video games, and TTRPGs—interests that inspire creative thinking in my technical work.</p>
     </section>
-      <section class="skills">
+
+    <section class="skills">
       <h2>Skills & Tools</h2>
       <div class="skills-grid">
         <div>
@@ -72,10 +75,25 @@
         </div>
       </div>
     </section>
+
+    <!-- TL;DR Section -->
+    <section id="tldr" class="tldr-section">
+      <h2>TL;DR</h2>
+      <p>
+        Sometimes you don’t feel like scrolling through a whole portfolio—I get it.  
+        I’m Raymond: a developer, technical writer, and creative who mixes code, clarity, and storytelling.  
+        I build clean interfaces, write solid documentation, and craft guides that actually make sense.  
+        If you're looking for someone who can communicate and create with purpose—I’m your guy.
+      </p>
+      <p style="margin-top: 2rem; font-style: italic; font-size: 0.95rem;">
+  Questions? Reach me at <a href="mailto:catoraymond@gmail.com">catoraymond@gmail.com</a>.
+</p>
+    </section>
   </main>
 
   <footer>
     <p>© 2025 Raymond Cato</p>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
