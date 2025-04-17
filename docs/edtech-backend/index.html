@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EdTech Backend Documentation</title>
+  <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body>
+  <header>
+    <h1>EdTech Backend Documentation</h1>
+    <nav>
+      <a id="home-link" href="#">Home</a>
+      <a href="#overview">Overview</a>
+      <a href="#features">Features</a>
+      <a href="#tech-stack">Tech Stack</a>
+      <a href="#installation">Installation</a>
+      <a href="#usage">Usage</a>
+      <a href="#endpoints">API Endpoints</a>
+      <a href="#contributing">Contributing</a>
+    </nav>
+  </header>
+
+  <section id="overview">
+    <h2>Overview</h2>
+    <p>
+      The EdTech Backend is a RESTful API that supports an educational technology platform, managing users, courses, and interactions. It is designed to work with a lightweight frontend tester and can be extended for full-scale deployment.
+    </p>
+  </section>
+
+  <section id="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li><strong>User Management:</strong> Add, retrieve, update, and delete users.</li>
+      <li><strong>Course Management:</strong> Create and fetch courses with key data.</li>
+      <li><strong>Frontend Tester:</strong> Interact with the API using a user-friendly interface.</li>
+      <li><strong>Modular Design:</strong> Easily extendable via Express routes and Mongoose models.</li>
+    </ul>
+  </section>
+
+  <section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <ul>
+      <li><strong>Backend:</strong> Node.js, Express.js</li>
+      <li><strong>Database:</strong> MongoDB with Mongoose</li>
+      <li><strong>Frontend Tester:</strong> HTML, CSS, JavaScript (static UI)</li>
+      <li><strong>Deployment:</strong> Render (Backend), GitHub Pages (Frontend)</li>
+    </ul>
+  </section>
+
+  <section id="installation">
+    <h2>Installation Instructions</h2>
+
+    <h3>1. Clone the Repository</h3>
+    <pre><code>git clone https://github.com/CatoRaymond-FS/edtech-backend.git</code></pre>
+
+    <h3>2. Install Dependencies</h3>
+    <pre><code>npm install</code></pre>
+
+    <h3>3. Configure Environment Variables</h3>
+    <p>Create a <code>.env</code> file in the root directory and add:</p>
+    <pre><code>MONGO_URI=your-mongodb-connection-string
+PORT=3000</code></pre>
+
+    <h3>4. Start the Server</h3>
+    <pre><code>node server.js</code></pre>
+    <p>Visit <code>http://localhost:3000</code> to access the API.</p>
+  </section>
+
+  <section id="usage">
+    <h2>Usage</h2>
+    <p>To test the API easily, visit the frontend tester:</p>
+    <p><a href="https://catoraymond-fs.github.io/edtech-backend/">Frontend Tester</a></p>
+    <p>Or interact with the deployed backend directly:</p>
+    <p><a href="https://edtech-backend-hr01.onrender.com">https://edtech-backend-hr01.onrender.com</a></p>
+  </section>
+
+  <section id="endpoints">
+    <h2>API Endpoints</h2>
+    <ul>
+      <li><strong>GET /api/users</strong> – Fetch all users</li>
+      <li><strong>POST /api/users</strong> – Add a new user</li>
+      <li><strong>GET /api/courses</strong> – Fetch all courses</li>
+      <li><strong>POST /api/courses</strong> – Add a new course</li>
+    </ul>
+  </section>
+
+  <section id="contributing">
+    <h2>Contributing</h2>
+    <ul>
+      <li>Fork the repository</li>
+      <li>Create a new branch (e.g. <code>feature/auth</code>)</li>
+      <li>Commit your changes with clear messages</li>
+      <li>Push and create a pull request</li>
+    </ul>
+    <p>All contributions are welcome to improve the system!</p>
+  </section>
+
+  <footer>
+    <p>Visit the <a href="https://github.com/CatoRaymond-FS/edtech-backend">GitHub repository</a> for full source code and issues.</p>
+  </footer>
+
+  <script>
+    const isLocal = location.protocol === 'file:';
+    const homeLink = isLocal ? '../../index.html' : '/portfolio/index.html';
+    document.getElementById('home-link').setAttribute('href', homeLink);
+  </script>
+</body>
+</html>
