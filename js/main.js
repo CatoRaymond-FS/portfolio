@@ -11,14 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
         section.style.maxHeight = section.scrollHeight + "px";
         section.style.overflow = "hidden";
 
+        button.textContent = "Okay I'll check it out"; // change text
+
         setTimeout(() => {
           window.scrollTo({
-            top: section.offsetTop - 20, // scroll just a little past it
+            top: section.offsetTop - 20,
             behavior: "smooth",
           });
-        }, 100); // slight delay for display update
+        }, 100);
       } else {
         section.style.maxHeight = "0";
+        button.textContent = "Just Give Me the TL;DR"; // reset text
         setTimeout(() => {
           section.style.display = "none";
         }, 300);
